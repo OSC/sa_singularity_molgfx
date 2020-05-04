@@ -3,14 +3,14 @@
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3587)
 [![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Singularity image for [Open Chemistry](https://github.com/OpenChemistry), Gabedit, Jmol and IQmol. It was built on top of the base Docker image [ubuntu](https://hub.docker.com/_/ubuntu). Packages installed: `qgis qgis-plugin-grass`
+Singularity image for [Open Chemistry](https://github.com/OpenChemistry), Gabedit and Jmol. It was built on top of the base Docker image [ubuntu](https://hub.docker.com/_/ubuntu).
 
 ## Build
 
 You can build a local Singularity image named `molgfx.sif` with:
 
 ```sh
-sudo singularity build qgis.sif Singularity
+sudo singularity build molgfx.sif Singularity
 ```
 
 ## Deploy
@@ -22,6 +22,10 @@ singularity pull molgfx.sif shub://OSC/sa_singularity_molgfx
 ```
 
 ## Run
+### Find versions of molecular graphics systems
+```sh
+singularity inspect -H molgfx.sif
+```
 
 ### Start Avogadro2
 Avogadro2 is started using the default exec command:
